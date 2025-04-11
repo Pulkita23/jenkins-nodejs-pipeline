@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     tools {
-        nodejs "NodeJS-18"  // Ensure you set this in Jenkins settings
+        nodejs "NodeJS-18" // Set up in Jenkins Tools config
     }
 
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/your-username/jenkins-nodejs-pipeline.git'
+                git credentialsId: 'github-token', url: 'https://github.com/Pulkita23/jenkins-nodejs-pipeline.git'
             }
         }
 
@@ -18,16 +18,20 @@ pipeline {
             }
         }
 
-        stage('Test') {
+        stage('Run Tests') {
             steps {
                 sh 'npm test'
             }
         }
 
-        stage('Build') {
+        stage('Build App') {
             steps {
-                echo 'Build complete. App is ready.'
+                echo '✅ Build finished successfully!'
             }
         }
     }
 }
+
+
+
+
