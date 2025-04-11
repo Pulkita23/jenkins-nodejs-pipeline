@@ -1,10 +1,12 @@
-
+{
   "name": "jenkins-nodejs-pipeline",
   "version": "1.0.0",
-  "main": "app.js",
+  "description": "Simple Node.js app for Jenkins pipeline testing",
+  "main": "index.js",
   "scripts": {
-"start": "node app.js"
-    "test": "echo \"Running tests....\"&& exit 0"
+    "start": "node index.js",
+    "test": "echo \"No tests specified\" && exit 0"
   },
-  "dependencies":{}
+  "author": "Pulkita",
+  "license": "ISC"
 }
