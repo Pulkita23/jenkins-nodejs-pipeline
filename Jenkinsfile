@@ -24,14 +24,18 @@ pipeline {
             }
         }
 
-        stage('Build App') {
+        stage('Start App') {
             steps {
-                echo '✅ Build finished successfully!'
+                bat 'start /B npm start'
             }
         }
     }
+
+    post {
+        always {
+            echo 'Pipeline completed.'
+        }
+    }
 }
-
-
 
 
