@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git credentialsId: 'github-token', url: 'https://github.com/Pulkita23/jenkins-nodejs-pipeline.git'
+                git credentialsId: 'github-token', url: 'https://github.com/Pulkita23/jenkins-nodejs-pipeline.git', branch: 'main'
             }
         }
 
